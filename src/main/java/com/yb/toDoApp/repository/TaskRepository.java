@@ -53,25 +53,26 @@ public class TaskRepository
          return taskList;
     }
     // UPDATE 
-    public void updateTask(String title, String description, String category, int id)
+    public void updateTask(Task task, int id)
     {
-            System.out.println("INSIDE REPOSITORY");
-            System.out.println("title===> "+title);
-            if(!title.equals("''"))
+            
+            if(task.getTitle() != null)
             {
-                System.out.println("inside if");
-                final String sql = "update Task set Title = ?  where TaskID = ?";
-                jdbcTemp.update(sql, title,id);
+            
+                final String sql = "update task set title = ?  where taskID = ?";
+                int i =  jdbcTemp.update(sql, task.getTitle() ,id);
+                System.out.println("feedback "+i);
+               
             }
-            if(!description.equals("''"))
+            if(task.getDescription() != null)
             {
                 final String sql = "update Task set description = ?  where TaskID = ?";
-                jdbcTemp.update(sql, description,id);
+                jdbcTemp.update(sql,task.getDescription(),id);
             }
-            if(!category.equals("''"))
+            if(task.getCategory()!= null)
             {
                 final String sql = "update Task set category= ?  where TaskID = ?";
-                jdbcTemp.update(sql, category,id);
+                jdbcTemp.update(sql,task.getCategory(),id);
             }
     }
     // DELETE 
