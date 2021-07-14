@@ -5,6 +5,7 @@ import com.yb.toDoApp.Entity.Task;
 import java.util.List;
 import com.yb.toDoApp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-
+@CrossOrigin
 @RestController
 public class TaskController
 {
@@ -47,12 +48,12 @@ public class TaskController
      {
          taskService.deleteTask(id);
      }
-    // update
-   @PutMapping("/todo/{id}")
-   public void updateTask(@PathVariable int id, String title, String description, String category)
-    {
-        taskService.updateTask(id, title, description, category);
-    }
+    // UPDATE
+    @PutMapping("/todo/{id}")
+    public void updateTask(@PathVariable int id, @RequestBody Task task)
+     {
+         taskService.updateTask(id, task);
+     }
 
    
 
