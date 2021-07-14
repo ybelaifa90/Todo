@@ -31,12 +31,10 @@ public class TaskService
         return taskRepository.getAll();
     }
     // UPDATE
-    public void  updateTask(int id,String title, String description, String category)
+    public void  updateTask(int id,Task task)
     {
-        System.out.println("inside service");
-        taskRepository.updateTask( title,  description, category,id);
+        taskRepository.updateTask( task,id);
     }
-  
     // DELETE
     public void deleteTask(int taskID)
     {
