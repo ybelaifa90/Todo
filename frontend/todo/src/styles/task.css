@@ -1,0 +1,81 @@
+#task-list-container
+{
+   
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#task-container
+{
+    /*background-color: rgb(81, 83, 185);*/
+    width: 400px;
+    
+    margin: auto;
+    height: fit-content;
+    /*border-style: solid ;*/
+    margin-top: 30px;
+    background-color: #344955;
+    padding: 10px;
+    border-radius: 25px;
+
+}
+.title
+{
+    /*background-color:yellow;*/
+    height: 30px;
+    width: 200px;
+   /* border-bottom: solid blue;*/
+    margin: auto;
+    color: whitesmoke;
+  
+}
+
+.description
+{
+    background-color: whitesmoke;
+    
+    width: 330px;
+    height:220px;
+    overflow: scroll;
+    padding: 2px;
+    margin: auto;
+    margin-top: 15px;
+   
+    
+}
+#save-button
+{
+    background-color: #344955;
+    cursor: pointer;
+    padding: 3px;
+    margin-left: 30px;
+    outline: none;
+    color: whitesmoke;
+    
+    
+}
+#delete-icon
+{
+    color: rgb(209, 26, 26);
+    cursor: pointer;
+    position: absolute;
+    margin-left: -30px;
+    font-size: 20px;
+}
+#delete-icon:hover
+{
+    font-size: 30px;
+}
+#completed
+{
+    color: whitesmoke;
+    margin-left: 30px;
+}
+
+.cat
+{
+    /*background-color: yellow;*/
+    border-bottom: solid blue;
+    width: fit-content;
+    margin: auto;
+    color: whitesmoke;
+}

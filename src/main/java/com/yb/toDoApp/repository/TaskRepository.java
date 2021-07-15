@@ -52,6 +52,26 @@ public class TaskRepository
         taskList = jdbcTemp.query(sql, new TaskMapper());
          return taskList;
     }
+    // update task status
+    public void updateTaskStatus(Task task, int id)
+    {
+        System.out.println("INSIDE UPDATE STATUS "); 
+
+        if(task.isFinished()!= false)
+        {
+            task.setFinished(true);
+            System.out.println("task.isFinished()=== "+task.isFinished()); 
+            final String sql = "update Task set finished = ?  where TaskID = ?";
+            jdbcTemp.update(sql,task.isFinished(),id);
+        }
+        if(task.isFinished()!= true)
+        {
+            task.setFinished(false);
+            System.out.println("task.isFinished()=== "+task.isFinished()); 
+            final String sql = "update Task set finished = ?  where TaskID = ?";
+            jdbcTemp.update(sql,task.isFinished(),id);
+        }
+    }
     // UPDATE 
     public void updateTask(Task task, int id)
     {
@@ -74,6 +94,8 @@ public class TaskRepository
                 final String sql = "update Task set category= ?  where TaskID = ?";
                 jdbcTemp.update(sql,task.getCategory(),id);
             }
+          
+            
     }
     // DELETE 
     public void deleteTask(int taskID)

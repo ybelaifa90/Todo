@@ -35,6 +35,11 @@ public class TaskService
     {
         taskRepository.updateTask( task,id);
     }
+    //UPDATE TASK STATUS
+    public void  updateTaskStatus(int id,Task task)
+    {
+        taskRepository.updateTaskStatus(task, id);
+    }
     // DELETE
     public void deleteTask(int taskID)
     {

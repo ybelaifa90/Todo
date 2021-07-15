@@ -1,0 +1,45 @@
+body
+{
+    background-image: linear-gradient(to bottom right, rgb(49, 56, 155) , rgb(103, 221, 211));
+    
+}
+
+#task-list
+{
+    /*background-color: aquamarine;*/
+    width: 300px;
+    border-radius: 25px;
+    margin: auto;
+}
+#form
+{
+    background-color: rgb(36, 135, 192);
+    padding-top: 5px;
+    /*border-color: rgb(241, 17, 17);*/
+    width: fit-content;
+    margin: auto;
+    border-style: solid;
+}
+#task-Title-input
+{
+    height: 30px;
+    box-sizing: border-box;
+    font-size: large;
+    
+    
+}
+#task-category-input
+{
+    height: 30px;
+    box-sizing: border-box;
+}
+#task-description-input
+{
+    overflow-y: scroll;
+    resize: none;
+}
+
+#ed
+{
+    cursor: pointer;
+}

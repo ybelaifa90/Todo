@@ -54,6 +54,12 @@ public class TaskController
      {
          taskService.updateTask(id, task);
      }
+     // UPDATE TASK STATUS
+    @PutMapping("/todo/status/{id}")
+    public void updateTaskStatus(@PathVariable int id, @RequestBody Task task)
+     {
+         taskService.updateTaskStatus(id, task);
+     }
 
    
 
