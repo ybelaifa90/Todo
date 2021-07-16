@@ -83,7 +83,7 @@ class TestComponent extends Component
                    description: newDesc,
                 })
                 
-            }).then(window.location.href = "/todo");
+            }).then(window.location.href = "/todo#"+id);
           
     }
     
@@ -108,7 +108,7 @@ class TestComponent extends Component
                 body:JSON.stringify ({
                     finished:true,
                 })
-            }).then(window.location.href = "/todo");
+            }).then(window.location.href = "/todo#"+id);
             document.getElementsByClassName(id)[3].style.color = 'rgb(10, 240, 29)';
             document.getElementsByClassName(id)[3].innerHTML = 'Mark as Uncompleted';
             document.getElementsByClassName(id)[4].style.color = 'rgb(10, 240, 29)';
@@ -128,7 +128,7 @@ class TestComponent extends Component
                 body:JSON.stringify ({
                     finished:false,
                 })
-            }).then(window.location.href = "/todo");
+            }).then(window.location.href = "/todo#"+id);
 
             document.getElementsByClassName(id)[3].style.color = 'orange';
             document.getElementsByClassName(id)[4].style.color = 'orange';
