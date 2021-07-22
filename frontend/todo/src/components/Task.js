@@ -132,6 +132,8 @@ class TestComponent extends Component
 
             document.getElementsByClassName(id)[3].style.color = 'orange';
             document.getElementsByClassName(id)[4].style.color = 'orange';
+            document.getElementsByClassName(id)[3].innerHTML = 'Mark as completed';
+
         }
       
     }
