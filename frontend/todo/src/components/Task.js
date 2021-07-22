@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 
 
-class TestComponent extends Component
+class Task extends Component
 {
     
     constructor(props) 
@@ -162,4 +162,4 @@ class TestComponent extends Component
     }
 }
 
-export default TestComponent
+export default Task
